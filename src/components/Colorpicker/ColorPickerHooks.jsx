@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Container, ColorTab, Label } from './Colorpicker.styled';
 
 function ColorPickerHooks(colors) {
   const [activeIndex, setActiveIndex] = useState();
@@ -10,7 +11,7 @@ function ColorPickerHooks(colors) {
             key={color.id}
             active={index === activeIndex}
             onClick={() => {
-              setActiveIndex();
+              setActiveIndex(index);
             }}
             color={color.color}
           >
